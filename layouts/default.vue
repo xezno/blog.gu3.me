@@ -1,20 +1,17 @@
 <template>
   <div>
-    <Nuxt />
+    <main>
+      <Nuxt />
+    </main>
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import url("~/assets/normalize.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -22,41 +19,43 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background: #FFFFFF;
+  color: #0E0E0E;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
+  margin: 10px 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+a {
+  color: inherit;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+h1, h2, h3, h4, h5, h6 {
+  line-height: 2;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+video {
+  width: 100%;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+main {
+  padding: 50px;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+
+  & h1 {
+    font-size: 2em !important;
+  }
+
+  & h2 {
+    font-size: 1.5em !important;
+  }
 }
 </style>
