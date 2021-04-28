@@ -29,7 +29,14 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/google-fonts'
   ],
+
+  googleFonts: {
+    families: {
+      Inter: [400, 700]
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

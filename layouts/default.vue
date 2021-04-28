@@ -8,7 +8,6 @@
 
 <style lang="scss">
 @import url("~/assets/normalize.css");
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
