@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>Blog</h1>
+    <h1>Alex's Blog</h1>
     <ul>
       <li v-for="article in articles" v-bind:key="article.title">
-        <nuxt-link :to="`/${article.slug}`">{{ article.title }}</nuxt-link>
+        {{ article.date | date }} - <nuxt-link :to="`/${article.slug}`">{{ article.title }}</nuxt-link>
       </li>
     </ul>
   </div>

@@ -22,7 +22,6 @@ html {
   background: #FFFFFF;
   color: #0E0E0E;
   line-height: 1.5;
-  text-align: justify;
 }
 
 *,
@@ -37,7 +36,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 2;
+  margin: 1.5em 0;
 }
 
 video {
