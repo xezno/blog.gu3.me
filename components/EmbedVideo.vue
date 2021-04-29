@@ -1,24 +1,23 @@
 <template>
   <div>
-    <div class="streamable-embed" v-if="type == 'streamable'">
-      <iframe :src="src"
-        style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;"
-        allowfullscreen
-        scrolling="no"
-        allow="encrypted-media">
-      </iframe>
-    </div>
+    <streamable :src="src" v-if="type == 'streamable'"></streamable>
+
+    <youtube :src="src" v-if="type == 'youtube'"></youtube>
 
     <div class="gif-embed" v-if="type == 'gif'" @click="toggle">
       <vue-freezeframe :options="{ overlay: true, trigger: false }" :src="src" ref="freeze" />
     </div>
+    
+    <video controls v-if="type == 'html5'">
+      <source :src="src">
+    </video>
   </div>
 </template>
 
 <script>
   export default {
     props: {
-      src: String
+      src: String,
     },
     computed: {
       type: function() {
@@ -27,6 +26,9 @@
         }
         else if (this.src.indexOf("streamable.com") > -1) {
           return "streamable";
+        }
+        else if (this.src.indexOf("youtube.com") > -1 || this.src.indexOf("youtu.be") > -1) {
+          return "youtube";
         }
         else {
           return "html5";
@@ -43,15 +45,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .streamable-embed {
-    left: 0; 
-    width: 100%; 
-    height: 0; 
-    position: relative; 
-    padding-bottom: 103.2609%;
-    margin: 0 0 2em 0;
-  }
-
   .gif-embed {
     cursor: pointer;
   }

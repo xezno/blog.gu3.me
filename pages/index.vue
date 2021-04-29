@@ -12,7 +12,7 @@
 <script>
 export default {
   async asyncData ({ $content }) {
-    const articles = await $content().sortBy("date", "desc").fetch();
+    const articles = await $content().sortBy("date", "desc").where({"hidden": { $ne: true }}).fetch();
 
     return {
       articles
