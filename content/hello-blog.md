@@ -1,5 +1,6 @@
 ---
 title: Hello, Blog!
+tags: intro,blog
 date: 2021-04-29T00:05:02+01:00
 ---
 
