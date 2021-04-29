@@ -1,6 +1,6 @@
 ---
 title: MKJS Controller Support
-date: 2021-04-29 10:06:02 GMT+1
+date: 2021-04-29T10:06:02+01:00
 description: I implemented controller support for MKJS - Mario Kart in the browser.
 ---
 
