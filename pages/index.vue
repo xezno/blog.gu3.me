@@ -17,7 +17,45 @@ export default {
     return {
       articles
     }
-  }
+  },
+  computed: {  
+    title() {
+      return "Alex\'s Blog";
+    },
+    description() {
+      return "";
+    },
+    url() {
+      return `https://blog.gu3.me${this.$route.fullPath}`;
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          content: this.description,
+          name: 'description'
+        },
+        {
+          hid: 'og:title',
+          content: this.title,
+          property: 'og:title'
+        },
+        {
+          hid: 'og:description',
+          content: this.description,
+          property: 'og:description'
+        },
+        {
+          hid: 'og:url',
+          content: this.url,
+          property: 'og:url'
+        }
+      ]
+    }
+  },
 }
 </script>
 
