@@ -2,7 +2,7 @@
   <article>
     <div class="title">
       <h1>{{ page.title }}</h1>
-      <h5>{{ page.date }}</h5>
+      <h5>{{ page.date | exactDate }}</h5>
     </div>
     <nuxt-content :document="page" />
   </article>
