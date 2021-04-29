@@ -6,7 +6,7 @@ description: I implemented controller support for MKJS - Mario Kart in the brows
 
 I saw an interesting gif of Krunker.io (the web game) being played on an Xbox Series X the other day.
 
-![krunker on xbox](/mkjs-controller/krunkerxbox.gif)
+<EmbedVideo src="/mkjs-controller/krunkerxbox.gif"></EmbedVideo>
 
 My first thought was, "wow, that's cool, the PlayStation doesn't have WebGL support". I then remembered the time I tried
 to get [MKJS](https://github.com/riperiperi/mkjs) working on my PlayStation 4 a few years ago - but, since there wasn't
@@ -20,15 +20,7 @@ So that's what I did.
 The first thing I did was to get the button layout right. It uses the same layout as the original Mario Kart DS - so controls
 are basically 1:1. The only exception to this is the turning, which is now completely analog:
 
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 103.2609%;">
-  <iframe src="https://streamable.com/o/c6sley"
-    style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;"
-    allowfullscreen
-    scrolling="no"
-    allow="encrypted-media">
-  </iframe>
-</div>
-<br>
+<EmbedVideo src="https://streamable.com/o/c6sley"></EmbedVideo>
 
 I also added rumble support... but trying to demonstrate that is hard, so you'll just have to imagine it. Rumble support is
 basic - it happens on specific events (kart collisions, drifting, whenever you spin out after hitting an item) and it's all

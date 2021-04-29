@@ -29,6 +29,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: "~/plugins/freeze-gif.js", mode: "client" },
     "~/plugins/date-filter.js"
   ],
 
@@ -53,6 +54,15 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
+
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { text } = require('reading-time')(document.text);
+        document.readingTime = text;
+      }
+    }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

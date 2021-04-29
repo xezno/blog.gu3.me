@@ -3,7 +3,7 @@
     <h1>Alex's Blog</h1>
     <ul>
       <li v-for="article in articles" v-bind:key="article.title">
-        {{ article.date | date }} - <nuxt-link :to="`/${article.slug}`">{{ article.title }}</nuxt-link>
+        {{ article.date | date }} - <nuxt-link :to="`/${article.slug}`">{{ article.title }}</nuxt-link> ({{ article.readingTime }})
       </li>
     </ul>
   </div>
