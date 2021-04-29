@@ -1,5 +1,4 @@
 <template>
-  <div>
   <div class="youtube-embed" :style="`padding-bottom: ${aspectRatio}%;`">
     <iframe 
       :src="youtubeEmbedUrl" 
@@ -8,7 +7,6 @@
       scrolling="no" 
       allow="encrypted-media">
     </iframe>
-  </div>
   </div>
 </template>
 
