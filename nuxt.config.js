@@ -9,7 +9,12 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Alex Guthrie: Computer Science student and software developer.' },
-      { name: "description", "content": "Alex Guthrie: Computer Science student and software developer." }
+      { property: 'og:title', content: 'Alex\'s Blog' },
+      { property: 'og:site_name', content: 'Alex\'s Blog' },
+      { property: 'og:locale', content: 'en_GB' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'http://blog.gu3.me/' },
+      { property: 'og:image', content: 'http://blog.gu3.me/robot.png' },
     ],
     link: [
       { rel: 'shortcut icon', type: 'image/png', href: '/robot.png' },

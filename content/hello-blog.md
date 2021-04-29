@@ -5,6 +5,8 @@ date: 2021-04-29 00:05:00 GMT+1
 
 Decided to make a blog so that I can document things and I feel like I don't write enough stuff. So here it is.
 
+<!--more-->
+
 I wanted to keep it as simple as possible, so going to [the root](https://blog.gu3.me/) will take you straight to a list of
 posts.
 Pages can be linked to [like this](https://blog.gu3.me/hello-blog).

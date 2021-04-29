@@ -5,6 +5,8 @@ date: 2021-04-29 10:06:02 GMT+1
 
 I saw an interesting gif of Krunker.io (the web game) being played on an Xbox Series X the other day.
 
+<!--more-->
+
 ![krunker on xbox](/mkjs-controller/krunkerxbox.gif)
 
 My first thought was, "wow, that's cool, the PlayStation doesn't have WebGL support". I then remembered the time I tried
