@@ -1,6 +1,6 @@
 ---
 title: Hello, Blog!
-date: 29 April 2021 00:05 GMT+1
+date: 2021-04-29 00:05:00 GMT+1
 ---
 
 Decided to make a blog so that I can document things and I feel like I don't write enough stuff. So here it is.
