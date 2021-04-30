@@ -19,7 +19,8 @@ export default {
       { rel: 'shortcut icon', type: 'image/png', href: '/robot.png' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' },
-      { rel: 'preload', as: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' }
+      { rel: 'preload', as: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' },
+      { rel: 'alternate', type: 'application/atom+xml', title: 'RSS feed for Alex\'s Blog', href: '/feed/rss.xml' }
     ]
   },
 
@@ -53,8 +54,46 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/feed'
   ],
+
+  feed () {
+    const baseUrlArticles = 'https://blog.gu3.me';
+    const baseLinkFeedArticles = '/feed';
+    const feedFormats = {
+      rss: { type: 'rss2', file: 'rss.xml' }
+    };
+    const { $content } = require('@nuxt/content');
+
+    const createFeedArticles = async function (feed) {
+      feed.options = {
+        title: 'Alex\'s Blog',
+        description: '',
+        link: baseUrlArticles,
+      }
+
+      const articles = await $content().sortBy("date", "desc").where({"hidden": { $ne: true }}).fetch();
+
+      articles.forEach((article) => {
+        const url = `${baseUrlArticles}/${article.slug}`;
+
+        feed.addItem({
+          title: article.title,
+          id: url,
+          link: url,
+          date: new Date(article.date),
+          description: article.description
+        });
+      });
+    }
+
+    return Object.values(feedFormats).map(({ file, type }) => ({
+      path: `${baseLinkFeedArticles}/${file}`,
+      type: type,
+      create: createFeedArticles,
+    }));
+  },
 
   hooks: {
     'content:file:beforeInsert': (document) => {
