@@ -18,8 +18,6 @@ export default {
     link: [
       { rel: 'shortcut icon', type: 'image/png', href: '/robot.png' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' },
-      { rel: 'preload', as: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' },
       { rel: 'alternate', type: 'application/atom+xml', title: 'RSS feed for Alex\'s Blog', href: '/feed/rss.xml' }
     ]
   },
