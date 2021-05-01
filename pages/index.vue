@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Alex's Blog</h1>
+    <h1><a href="https://gu3.me/">Alex</a>'s Blog</h1>
     <ul>
       <li v-for="article in articles" v-bind:key="article.title">
         {{ article.date | date }} - <nuxt-link :to="`/${article.slug}`">{{ article.title }}</nuxt-link> ({{ article.readingTime }})
