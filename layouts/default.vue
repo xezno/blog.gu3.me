@@ -18,8 +18,17 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+
   background: #FFFFFF;
-  color: #0E0E0E;
+  color: #202020;
+
+  @media screen and (prefers-color-scheme: dark) {
+    /* Dark mode */
+    background: #202020;
+    color: #ffffff;
+    font-weight: 350; // Thinner font; easier to read on dark background
+  }
+
   line-height: 1.5;
 }
 
@@ -36,6 +45,10 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1.5em 0;
+
+  @media screen and (prefers-color-scheme: dark) {
+    font-weight: 650;
+  }
 }
 
 video, img {

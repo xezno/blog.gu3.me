@@ -42,7 +42,7 @@ export default {
 
   googleFonts: {
     families: {
-      Inter: [400, 700]
+      Inter: [400 + ".." + 700]
     }
   },
 
