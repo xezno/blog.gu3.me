@@ -66,22 +66,27 @@ export default {
           property: 'og:article:author'
         },
         {
+          hid: "twitter:domain",
           property: "twitter:domain",
           content: ""
         },
         {
+          hid: "twitter:url",
           property: "twitter:url",
           content: "http://blog.gu3.me/"
         },
         {
+          hid: "twitter:title",
           name: "twitter:title",
           content: `${this.title}`
         },
         {
+          hid: "twitter:description",
           name: "twitter:description",
           content: this.description
         },
         {
+          hid: "twitter:image",
           name: "twitter:image",
           content: "http://blog.gu3.me/robot.png"
         }
