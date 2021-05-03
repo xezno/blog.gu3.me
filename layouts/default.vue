@@ -22,6 +22,10 @@ html {
   background: #FFFFFF;
   color: #202020;
 
+  :not(pre) > code[class*="language-"], pre[class*="language-"], code {
+    font-family: "IBM Plex Mono", "Comic Sans MS", monospace !important;
+  }
+
   @media screen and (prefers-color-scheme: dark) {
     /* Dark mode */
     background: #202020;
