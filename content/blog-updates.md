@@ -1,5 +1,5 @@
 ---
-title: Blog updates
+title: Blog Updates
 date: 2021-05-03T12:32:01+01:00
 tags: blog,nuxt,vue
 ---
