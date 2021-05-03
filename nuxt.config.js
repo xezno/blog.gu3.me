@@ -14,6 +14,12 @@ export default {
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'http://blog.gu3.me/' },
       { property: 'og:image', content: 'http://blog.gu3.me/robot.png' },
+      { name: "twitter:card", content: "summary" },
+      { property: "twitter:domain", content: "" },
+      { property: "twitter:url", content: "http://blog.gu3.me/" },
+      { name: "twitter:title", content: "Alex\'s Blog" },
+      { name: "twitter:description", content: "Alex Guthrie: Computer Science student and software developer." },
+      { name: "twitter:image", content: "http://blog.gu3.me/robot.png" }
     ],
     link: [
       { rel: 'shortcut icon', type: 'image/png', href: '/robot.png' },

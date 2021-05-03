@@ -35,8 +35,7 @@ export default {
   head() {
     return {
       title: this.title,
-      meta: [
-        {
+      meta: [{
           hid: 'description',
           content: this.description,
           name: 'description'
@@ -55,6 +54,36 @@ export default {
           hid: 'og:url',
           content: this.url,
           property: 'og:url'
+        },
+        {
+          hid: 'og:article:published_time',
+          content: this.date,
+          property: 'og:article:published_time'
+        },
+        {
+          hid: 'og:article:author',
+          content: "Alex",
+          property: 'og:article:author'
+        },
+        {
+          property: "twitter:domain",
+          content: ""
+        },
+        {
+          property: "twitter:url",
+          content: "http://blog.gu3.me/"
+        },
+        {
+          name: "twitter:title",
+          content: `${this.title}`
+        },
+        {
+          name: "twitter:description",
+          content: this.description
+        },
+        {
+          name: "twitter:image",
+          content: "http://blog.gu3.me/robot.png"
         }
       ]
     }
