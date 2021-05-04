@@ -73,6 +73,7 @@ got exposed to the game developer was good enough. Unfortunately I don't think I
 development is hard, and it's probably not for me, but I enjoyed doing this.
 
 ![lamege 1](https://media.discordapp.net/attachments/400357106227871744/759784299498045470/unknown.png?width=1176&height=676)
+*Model by [littledica on Sketchfab](https://sketchfab.com/3d-models/treasure-chest-mimic-985d5fefaa46491da69eb5e03ce3f7cc)*
 
 ## This Blog
 
