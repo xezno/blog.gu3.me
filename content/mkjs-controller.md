@@ -21,7 +21,7 @@ So that's what I did.
 The first thing I did was to get the button layout right. It uses the same layout as the original Mario Kart DS - so controls
 are basically 1:1. The only exception to this is the turning, which is now completely analog:
 
-<EmbedVideo src="https://streamable.com/c6sley"></EmbedVideo>
+<EmbedVideo src="https://cdn.discordapp.com/attachments/839155256964284459/839155409150935120/c6sley.mp4"></EmbedVideo>
 
 I also added rumble support... but trying to demonstrate that is hard, so you'll just have to imagine it. Rumble support is
 basic - it happens on specific events (kart collisions, drifting, whenever you spin out after hitting an item) and it's all

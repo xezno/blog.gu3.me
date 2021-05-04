@@ -59,3 +59,7 @@ Dates and times are now calculated correctly. Before, they would get calculated 
 but now it's all just client-sided.
 
 I've also added a link back to [my main website](https://gu3.me/) on the home page.
+
+*UPDATE 04/05/2021*: I've removed support for Streamable (and replaced all Streamable media) because they delete your stuff
+after 3 months. I'll just be using Discord as a host instead because it's fast & I already pay for it - and it also doesn't
+need some crappy embed in order to function.
