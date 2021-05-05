@@ -48,7 +48,7 @@ export default {
 
   googleFonts: {
     families: {
-      Inter: [ 400 + ".." + 700 ],
+      Inter: [ 350, 400, 650, 700 ],
       "IBM+Plex+Mono": [ 500 ]
     }
   },
