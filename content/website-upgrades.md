@@ -3,6 +3,7 @@ title: Website Upgrades
 date: 2021-05-06T16:16:53+01:00
 tags: website,upgrade,css,html
 thumb: https://cdn.discordapp.com/attachments/839155256964284459/839882613548384266/unknown.png
+description: I made some changes to my website.
 ---
 
 I moved [my website](https://gu3.me/) from SCSS to Tailwind yesterday, where it looked exactly the same - and then I got
