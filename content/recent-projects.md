@@ -2,6 +2,7 @@
 title: Recent Projects
 date: 2021-05-05T00:41:10+01:00
 tags: blog,nuxt,vue
+thumb: https://cdn.discordapp.com/attachments/400357106227871744/822567418030718996/Ew28-0NXAAMWV8O.png
 ---
 
 Here's some stuff I've worked on over the last few months to exercise my programming & game dev knowledge.

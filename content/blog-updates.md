@@ -2,6 +2,7 @@
 title: Blog Updates
 date: 2021-05-03T12:32:01+01:00
 tags: blog,nuxt,vue
+thumb: https://cdn.discordapp.com/attachments/839155256964284459/839819947764744203/unknown.png
 ---
 
 I'm trying to keep this blog as minimal and barebones as possible, but I still plan on adding things to it every now and

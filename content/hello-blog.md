@@ -2,6 +2,7 @@
 title: Hello, Blog!
 tags: intro,blog
 date: 2021-04-29T00:05:02+01:00
+thumb: https://cdn.discordapp.com/attachments/839155256964284459/839819947764744203/unknown.png
 ---
 
 Decided to make a blog so that I can document things and I feel like I don't write enough stuff. So here it is.

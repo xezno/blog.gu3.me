@@ -88,7 +88,8 @@ export default {
           id: url,
           link: url,
           date: new Date(article.date),
-          description: article.description
+          description: article.description,
+          thumb: article.thumb
         });
       });
     }

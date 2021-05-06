@@ -3,6 +3,7 @@ title: MKJS Controller Support
 date: 2021-04-29T10:06:02+01:00
 description: I implemented controller support for MKJS - Mario Kart in the browser.
 tags: mkjs,javascript,xbox,playstation
+thumb: https://cdn.discordapp.com/attachments/839155256964284459/839820184080482324/unknown.png
 ---
 
 I saw an interesting gif of Krunker.io (the web game) being played on an Xbox Series X the other day.
