@@ -89,7 +89,7 @@ export default {
           link: url,
           date: new Date(article.date),
           description: article.description,
-          thumb: article.thumb
+          image: article.thumb
         });
       });
     }
