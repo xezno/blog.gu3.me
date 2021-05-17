@@ -43,7 +43,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/tailwindcss'
   ],
 
   googleFonts: {
@@ -117,6 +118,10 @@ export default {
     }
   },
 
+  tailwindcss: {
+    jit: true
+  },
+
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
     markdown: {
@@ -128,5 +133,10 @@ export default {
   
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    babel:{
+      plugins: [
+        ['@babel/plugin-proposal-private-methods', { loose: true }]
+      ]
+    }
   }
 }
