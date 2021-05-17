@@ -46,8 +46,9 @@ There are some minor differences in the code, but you get the point. It's less o
 understand and read much more easily.
 
 Everything is high level enough for you to use with ease, but there's also a great deal of lower level access for people
-that want to get more advanced - the first thing that comes to mind here is ogniK loading in HL1 assets at runtime, with
-full texturing & physics. Super neat stuff.
+that want to get more advanced - the first thing that comes to mind here is 
+[ogniK loading in HL1 assets at runtime](https://cdn.discordapp.com/attachments/833983416390385685/843477783900454912/2021-05-16_23-18-23.mp4),
+with full texturing & some physics. Super neat stuff.
 
 ## Models
 
