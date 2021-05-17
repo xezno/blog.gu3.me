@@ -1,5 +1,5 @@
 ---
-title: s&box\: Week 1
+title: s&box - Week 1
 tags: sbox,devlog
 date: 2021-05-18T00:19:05+01:00
 thumb: https://cdn.discordapp.com/attachments/839155256964284459/843991025159503932/unknown.png
