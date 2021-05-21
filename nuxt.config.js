@@ -43,8 +43,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/google-fonts'
+    // '@nuxtjs/tailwindcss'
   ],
 
   googleFonts: {
@@ -118,9 +118,9 @@ export default {
     }
   },
 
-  tailwindcss: {
-    jit: true
-  },
+  // tailwindcss: {
+  //   jit: true
+  // },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
