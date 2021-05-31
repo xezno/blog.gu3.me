@@ -43,7 +43,14 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    // ['@nuxtjs/fontawesome', {
+    //   component: 'fa',
+    //   icons: {
+    //     solid: [ 'faEnvelope', 'faBlog' ],
+    //     brands: [ 'faGithub', 'faDiscord', 'faSpotify', 'faKeybase', 'faYoutube' ]
+    //   }
+    // }],
     // '@nuxtjs/tailwindcss'
   ],
 
@@ -118,9 +125,9 @@ export default {
     }
   },
 
-  // tailwindcss: {
-  //   jit: true
-  // },
+  tailwindcss: {
+    jit: true
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {

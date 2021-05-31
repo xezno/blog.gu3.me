@@ -3,7 +3,10 @@
     <h1><a href="https://gu3.me/">Alex</a>'s Blog</h1>
     <ul>
       <li v-for="article in articles" v-bind:key="article.title">
-        {{ article.date | date }} - <nuxt-link :to="`/${article.slug}`">{{ article.title }}</nuxt-link> ({{ article.readingTime }})
+        <nuxt-link :to="`/${article.slug}`"><h3>{{ article.title }}</h3></nuxt-link>
+        <b>{{ article.date | date }}, {{ article.readingTime }}</b>
+        <br>
+        {{ article.description }}
       </li>
     </ul>
   </div>
@@ -63,5 +66,13 @@ export default {
 ul {
   list-style: none;
   padding-left: 0;
+
+  & li {
+    margin: 50px 0;
+  }
+
+  & h3 {
+    margin: 0px 0;
+  }
 }
 </style>
