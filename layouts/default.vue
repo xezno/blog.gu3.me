@@ -28,7 +28,7 @@ html {
 
   @media screen and (prefers-color-scheme: dark) {
     /* Dark mode */
-    background: #202020;
+    background: rgba(33, 39, 44);
     color: #ffffff;
     font-weight: 350; // Thinner font; easier to read on dark background
   }
@@ -49,9 +49,21 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1.5em 0;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+
+  font-weight: 700;
 
   @media screen and (prefers-color-scheme: dark) {
-    font-weight: 650;
+    font-weight: 600;
+  }
+}
+
+h1 {
+  font-weight: 800;
+
+  @media screen and (prefers-color-scheme: dark) {
+    font-weight: 700;
   }
 }
 
