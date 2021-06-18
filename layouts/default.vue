@@ -82,6 +82,7 @@ main {
   max-width: 800px;
   width: 100%;
   margin: auto;
+  min-height: calc( 100vh - 132px );
 
   & h1 {
     font-size: 2em !important;
