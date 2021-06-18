@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h1><a href="https://gu3.me/">Alex</a>'s Blog</h1>
     <ul>
-      <li v-for="article in articles" v-bind:key="article.title">
-        <nuxt-link :to="`/${article.slug}`"><h3>{{ article.title }}</h3></nuxt-link>
+      <li v-on:click="$router.push(article.slug)" v-for="article in articles" v-bind:key="article.title">
+        <h3>{{ article.title }}</h3>
         <b>{{ article.date | date }}, {{ article.readingTime }}</b>
         <br>
         {{ article.description }}
+
+        <div class="article-image" :style="'background-image: url(' + (article.thumb ? article.thumb : 'https://source.unsplash.com/random/?landscape') + ');'"></div>
       </li>
     </ul>
   </div>
@@ -63,12 +64,82 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@mixin scrimMask($startColor: $color-black, $direction: 'to bottom') {
+  $scrimCoordinates: (
+    0: 1,
+    19: 0.738,
+    34: 0.541,
+    47: 0.382,
+    56.5: 0.278,
+    65: 0.194,
+    73: 0.126,
+    80.2: 0.075,
+    86.1: 0.042,
+    91: 0.021,
+    95.2: 0.008,
+    98.2: 0.002,
+    100: 0
+  );
+
+  $hue: hue($startColor);
+  $saturation: saturation($startColor);
+  $lightness: lightness($startColor);
+  $stops: ();
+
+  @each $colorStop, $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop/100);
+    $stops: append($stops, $stop, comma);
+  }
+
+  mask-image: linear-gradient(unquote($direction), $stops);
+  -webkit-mask-image: linear-gradient(unquote($direction), $stops);
+}
+
 ul {
   list-style: none;
   padding-left: 0;
 
   & li {
-    margin: 50px 0;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 10px;
+    transition: all 100ms ease;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba( #4c5b67, .2 );
+
+    &:hover {
+      border: 1px solid #4c5b67;
+      background: #364149;
+
+      .article-image {
+        opacity: 0.75;
+        z-index: 0;
+      }
+    }
+
+    .article-image {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      margin: 0;
+      width: 25%;
+      min-width: 200px;
+
+      background-size: cover;
+      background-position: center;
+
+      transition: all 100ms ease;
+
+      @include scrimMask( black, "to left" );
+
+      z-index: 0;
+      opacity: 0.4;
+    }
   }
 
   & h3 {

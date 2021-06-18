@@ -2,7 +2,12 @@
   <article>
     <div class="title">
       <h1>{{ page.title }}</h1>
-      <h5>{{ page.date | exactDate }} ({{ page.readingTime }})</h5>
+      <h5>
+        <fa icon="calendar"></fa> {{ page.date | exactDate }} (<fa icon="clock"></fa> {{ page.readingTime }})
+        <br>
+        <fa icon="tags"></fa> {{ page.tags }}
+      </h5>
+      <div class="separator"></div>
     </div>
     <nuxt-content :document="page" />
   </article>
@@ -107,5 +112,14 @@ export default {
   }
 
   margin-bottom: 2em;
+}
+
+.separator {
+  content: '';
+  display: block;
+  width: 100;
+  height: 1px;
+
+  background: #4c5b67;
 }
 </style>

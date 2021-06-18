@@ -1,8 +1,10 @@
 <template>
-  <div>
+  <div id="layout">
+    <Header></Header>
     <main>
       <Nuxt />
     </main>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -47,15 +49,19 @@ a {
   color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {  
   margin: 1.5em 0;
   font-family: "Poppins", sans-serif;
-  font-style: italic;
+  text-transform: uppercase;  
 
-  font-weight: 700;
+  font-weight: 900;
 
   @media screen and (prefers-color-scheme: dark) {
-    font-weight: 600;
+    font-weight: 800;
   }
 }
 
@@ -72,7 +78,7 @@ video, img {
 }
 
 main {
-  padding: 50px;
+  padding: 50px 20px;
   max-width: 800px;
   width: 100%;
   margin: auto;
@@ -84,5 +90,9 @@ main {
   & h2 {
     font-size: 1.5em !important;
   }
+}
+
+.svg-inline--fa {
+  margin-bottom: 0px;
 }
 </style>

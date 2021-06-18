@@ -44,13 +44,13 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/google-fonts',
-    // ['@nuxtjs/fontawesome', {
-    //   component: 'fa',
-    //   icons: {
-    //     solid: [ 'faEnvelope', 'faBlog' ],
-    //     brands: [ 'faGithub', 'faDiscord', 'faSpotify', 'faKeybase', 'faYoutube' ]
-    //   }
-    // }],
+    ['@nuxtjs/fontawesome', {
+      component: 'fa',
+      icons: {
+        solid: [ 'faTags', 'faCalendar', 'faClock', 'faSearch' ],
+        brands: [ 'faGithub', 'faDiscord', 'faSpotify', 'faKeybase', 'faYoutube' ]
+      }
+    }],
     // '@nuxtjs/tailwindcss'
   ],
 
