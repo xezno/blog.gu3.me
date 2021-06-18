@@ -112,7 +112,12 @@ ul {
 
     &:hover {
       border: 1px solid #4c5b67;
-      background: #364149;
+      
+      background: #cccccc;
+
+      @media screen and (prefers-color-scheme: dark) {
+        background: #364149;
+      }
 
       .article-image {
         opacity: 0.75;

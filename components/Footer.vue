@@ -17,7 +17,11 @@
 <style lang="scss" scoped>
 footer {
   width: 100%;
-  background: #364149;
+  background: #cccccc;
+
+  @media screen and (prefers-color-scheme: dark) {
+    background: #364149;
+  }
 
   z-index: 1000;
   margin: 0;
