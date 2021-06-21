@@ -1,6 +1,6 @@
 <template>
   <article>
-    <div class="title">
+    <div class="title" v-if="page">
       <h1>{{ page.title }}</h1>
       <h5>
         <fa icon="calendar"></fa> {{ page.date | exactDate }} (<fa icon="clock"></fa> {{ page.readingTime }})
