@@ -2,7 +2,7 @@
 title: Instagib (Mainly)
 tags: devlog,blog,sbox
 date: 2021-06-21T02:31:27+01:00
-thumb: 
+thumb: https://cdn.discordapp.com/attachments/839155256964284459/856346212940120064/InstagibThumb.png
 description: More stuff what I've been doing
 ---
 
