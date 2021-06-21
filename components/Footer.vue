@@ -15,13 +15,12 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/colors.scss";
 footer {
   width: 100%;
-  background: #cccccc;
+  background: $accent;
 
-  @media screen and (prefers-color-scheme: dark) {
-    background: #364149;
-  }
+  color: $accent-text;
 
   z-index: 1000;
   margin: 0;

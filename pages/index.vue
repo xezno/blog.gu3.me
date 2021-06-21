@@ -64,6 +64,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/colors.scss";
+
 @mixin scrimMask($startColor: $color-black, $direction: 'to bottom') {
   $scrimCoordinates: (
     0: 1,
@@ -108,20 +110,21 @@ ul {
 
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba( #4c5b67, .2 );
+    border: 1px solid rgba( $main-600, .2 );
+    background: $main-800;
 
     &:hover {
-      border: 1px solid #4c5b67;
-      
-      background: #cccccc;
+      border: 1px solid $accent;
+      box-shadow: 0 0 25px $accent;
 
-      @media screen and (prefers-color-scheme: dark) {
-        background: #364149;
-      }
+      background: $accent;
+      color: $accent-text;
 
       .article-image {
         opacity: 0.75;
         z-index: 0;
+
+        transform: scale(1.1);
       }
     }
 
@@ -138,7 +141,7 @@ ul {
       background-size: cover;
       background-position: center;
 
-      transition: all 100ms ease;
+      transition: all 100ms ease, transform 250ms ease;
 
       @include scrimMask( black, "to left" );
 

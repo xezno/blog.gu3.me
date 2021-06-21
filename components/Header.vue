@@ -23,13 +23,13 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/colors.scss";
+
 header {
   width: 100%;
-  background: #cccccc;
-
-  @media screen and (prefers-color-scheme: dark) {
-    background: #364149;
-  }
+  background: $accent;
+  color: $accent-text;
+  
   position: fixed;
   top: 0;
   left: 0;

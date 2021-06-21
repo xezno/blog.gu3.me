@@ -9,7 +9,8 @@
 </template>
 
 <style lang="scss">
-@import url("~/assets/normalize.css");
+@import "~/assets/colors.scss";
+@import "~/assets/normalize.css";
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
@@ -21,19 +22,13 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 
-  background: #FFFFFF;
-  color: #202020;
-
   :not(pre) > code[class*="language-"], pre[class*="language-"], code {
     font-family: "IBM Plex Mono", "Comic Sans MS", monospace !important;
   }
 
-  @media screen and (prefers-color-scheme: dark) {
-    /* Dark mode */
-    background: rgba(33, 39, 44);
-    color: #ffffff;
-    font-weight: 350; // Thinner font; easier to read on dark background
-  }
+  background: $main-900;
+  color: #ffffff;
+  font-weight: 350;
 
   line-height: 1.5;
 }
@@ -58,19 +53,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;  
 
-  font-weight: 900;
-
-  @media screen and (prefers-color-scheme: dark) {
-    font-weight: 800;
-  }
+  font-weight: 800;
 }
 
 h1 {
-  font-weight: 800;
-
-  @media screen and (prefers-color-scheme: dark) {
-    font-weight: 700;
-  }
+  font-weight: 700;
 }
 
 video, img {
