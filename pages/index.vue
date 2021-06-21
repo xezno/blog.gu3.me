@@ -1,14 +1,16 @@
 <template>
   <div>
     <ul>
-      <li v-on:click="$router.push(article.slug)" v-for="article in articles" v-bind:key="article.title">
-        <h3>{{ article.title }}</h3>
-        <b>{{ article.date | date }}, {{ article.readingTime }}</b>
-        <br>
-        {{ article.description }}
+      <nuxt-link v-for="article in articles" v-bind:key="article.title" :to="`/${article.slug}`" style="text-decoration: none;">
+        <li>
+          <h3>{{ article.title }}</h3>
+          <b>{{ article.date | date }}, {{ article.readingTime }}</b>
+          <br>
+          {{ article.description }}
 
-        <div class="article-image" :style="'background-image: url(' + (article.thumb ? article.thumb : 'https://source.unsplash.com/random/?landscape') + ');'"></div>
-      </li>
+          <div class="article-image" :style="'background-image: url(' + (article.thumb ? article.thumb : 'https://source.unsplash.com/random/?landscape') + ');'"></div>
+        </li>
+      </nuxt-link>
     </ul>
   </div>
 </template>
