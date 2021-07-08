@@ -53,11 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;  
 
-  font-weight: 800;
-}
-
-h1 {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 video, img {
