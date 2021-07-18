@@ -7,7 +7,7 @@ thumb:
 
 Here's what I worked on this month
 
-<!-- more -->
+<!--more-->
 
 # Instagib
 
