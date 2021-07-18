@@ -2,7 +2,7 @@
 title: Minecraf 2
 date: 2021-07-18T12:58:02+01:00
 tags: waywo,devlog,sbox
-thumb: 
+thumb: https://cdn.discordapp.com/attachments/834377561802801152/866003418363199538/unknown.png
 ---
 
 Here's what I worked on this month
