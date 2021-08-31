@@ -7,7 +7,7 @@
         <br>
         <fa icon="tags"></fa> {{ page.tags }}
       </h5>
-      <div class="separator"></div>
+      <div class="article-image" :style="'background-image: url(' + (page.thumb ? page.thumb : 'https://source.unsplash.com/random/?landscape') + ');'"></div>
     </div>
     <nuxt-content :document="page" />
   </article>
@@ -102,10 +102,79 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/colors.scss";
+
+@mixin scrimMask($startColor: $color-black, $direction: 'to bottom') {
+  $scrimCoordinates: (
+    0: 1,
+    19: 0.738,
+    34: 0.541,
+    47: 0.382,
+    56.5: 0.278,
+    65: 0.194,
+    73: 0.126,
+    80.2: 0.075,
+    86.1: 0.042,
+    91: 0.021,
+    95.2: 0.008,
+    98.2: 0.002,
+    100: 0
+  );
+
+  $hue: hue($startColor);
+  $saturation: saturation($startColor);
+  $lightness: lightness($startColor);
+  $stops: ();
+
+  @each $colorStop, $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop/100);
+    $stops: append($stops, $stop, comma);
+  }
+
+  mask-image: linear-gradient(unquote($direction), $stops);
+  -webkit-mask-image: linear-gradient(unquote($direction), $stops);
+}
 
 .title {
+  margin: 25px 0;
+  padding: 25px;
+  border-radius: 10px;
+  transition: all 100ms ease;
+
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba( $main-600, .2 );
+  background: $main-800;
+
+
+  text-align: center;
+
+  .article-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    margin: 0;
+    height: 75%;
+    min-width: 200px;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: all 100ms ease, transform 250ms ease;
+
+    @include scrimMask( black, "to bottom" );
+
+    z-index: 0;
+    opacity: 0.4;
+  }
+
   h1 {
     margin-bottom: 0.25em;
+    margin-top: 0.25em;
+    z-index: 2;
+    position: relative;
   }
   h5 {
     margin-top: 0.25em;
