@@ -1,5 +1,6 @@
 <template>
   <div>
+    <search></search>
     <ul>
       <nuxt-link v-for="article in articles" v-bind:key="article.title" :to="`/${article.slug}`" style="text-decoration: none;">
         <li>

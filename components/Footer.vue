@@ -1,9 +1,7 @@
 <template>
   <footer>
     <div class="footer-inner">
-      <div class="header-left">
-        <h4>&copy; 2021 Alex Guthrie</h4>
-      </div>
+      <h4>&copy; 2021 Alex Guthrie</h4>
     </div>
   </footer>
 </template>

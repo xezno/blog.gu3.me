@@ -4,14 +4,6 @@
       <div class="header-left">
         <nuxt-link to="/"><h3>Alex's Blog</h3></nuxt-link>
       </div>
-
-      <div class="header-middle">
-        <!-- <search></search> -->
-      </div>
-
-      <div class="header-right">
-        <!-- <fa icon="search"></fa> -->
-      </div>
     </div>
   </header>
 </template>
