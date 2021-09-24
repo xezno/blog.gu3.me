@@ -2,7 +2,7 @@
 title: Virtual Reality
 date: 2021-09-24T12:47:39+01:00
 tags: sbox,vr,virtual,reality,devlog
-thumb: /virtual-reality/thumb.png
+thumb: https://blog.gu3.me/virtual-reality/thumb.png
 ---
 
 Here's what I've been exploring over this last week!
