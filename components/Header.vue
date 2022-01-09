@@ -2,7 +2,7 @@
   <header>
     <div class="header-inner">
       <div class="header-left">
-        <nuxt-link to="/"><h3>Alex's Blog</h3></nuxt-link>
+        <nuxt-link to="/"><h4>Alex's Blog</h4></nuxt-link>
       </div>
     </div>
   </header>
@@ -22,7 +22,7 @@ header {
   background: $accent;
   color: $accent-text;
   
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -51,7 +51,12 @@ header {
       // width: 33%;
     }
 
-    h3 {
+    a {
+      text-decoration: none !important;
+    }
+
+    h4 {
+      font-size: 20px;
       padding: 0;
       margin: 0;
     }

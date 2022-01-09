@@ -49,6 +49,8 @@
   .search-wrapper {
     display: flex;
     position: relative;
+
+    margin-top: 24px;
   }
 
   .search-input {

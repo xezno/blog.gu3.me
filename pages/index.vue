@@ -118,7 +118,7 @@ ul {
 
     &:hover {
       border: 1px solid $accent;
-      box-shadow: 0 0 25px $accent;
+      box-shadow: 0 0 20px rgba( black, 0.25 );
 
       background: $accent;
       color: $accent-text;

@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer-inner">
-      <h4>&copy; 2021 Alex Guthrie</h4>
+      <h4>&copy; Alex Guthrie 2022</h4>
     </div>
   </footer>
 </template>
@@ -16,9 +16,8 @@
 @import "~/assets/colors.scss";
 footer {
   width: 100%;
-  background: $accent;
-
-  color: $accent-text;
+  background: $main-800;
+  text-transform: uppercase;
 
   z-index: 1000;
   margin: 0;
