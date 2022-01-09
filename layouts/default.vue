@@ -51,6 +51,7 @@ h1, h2, h3 {
 h1, h2, h3, h4, h5, h6 {  
   margin: 1.5em 0;
   font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
 
   font-weight: 900;
 }
