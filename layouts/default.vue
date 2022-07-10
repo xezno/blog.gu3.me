@@ -23,7 +23,7 @@ html {
   box-sizing: border-box;
 
   :not(pre) > code[class*="language-"], pre[class*="language-"], code {
-    font-family: "IBM Plex Mono", "Comic Sans MS", monospace !important;
+    font-family: monospace !important;
   }
 
   background: $main-900;
