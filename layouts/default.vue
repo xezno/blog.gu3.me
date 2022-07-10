@@ -13,7 +13,7 @@
 @import "~/assets/normalize.css";
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro", sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -44,16 +44,9 @@ a {
   color: inherit;
 }
 
-h1, h2, h3 {
-  font-style: italic;
-}
-
 h1, h2, h3, h4, h5, h6 {  
   margin: 1.5em 0;
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-
-  font-weight: 900;
+  font-family: "Inter", sans-serif;
 }
 
 video, img {
@@ -61,11 +54,11 @@ video, img {
 }
 
 main {
-  padding: 50px 20px;
+  padding: 60px 20px;
   max-width: 800px;
   width: 100%;
   margin: auto;
-  min-height: calc( 100vh - 112px );
+  min-height: calc( 100vh - 70px ); // This is a bit of a hack and needs changing
 
   & h1 {
     font-size: 2em !important;
@@ -78,5 +71,23 @@ main {
 
 .svg-inline--fa {
   margin-bottom: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: $main-700;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $main-700;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #333;
 }
 </style>

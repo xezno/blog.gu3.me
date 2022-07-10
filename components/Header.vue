@@ -1,9 +1,7 @@
 <template>
   <header>
     <div class="header-inner">
-      <div class="header-left">
-        <nuxt-link to="/"><h4>Alex's Blog</h4></nuxt-link>
-      </div>
+      <nuxt-link to="/"><h4>Alex's Blog</h4></nuxt-link>
     </div>
   </header>
 </template>
@@ -19,8 +17,6 @@
 
 header {
   width: 100%;
-  background: $accent;
-  color: $accent-text;
   
   position: absolute;
   top: 0;
@@ -28,8 +24,9 @@ header {
   right: 0;
   margin: 0;
 
-  box-shadow: 0 0 12px rgba( black, 0.2 );
+  background: $main-1000;
 
+  text-transform: uppercase;
   z-index: 1000;
 
   .svg-inline--fa {
@@ -47,16 +44,11 @@ header {
     justify-content: space-between;
     flex-wrap: nowrap;
 
-    & > * {
-      // width: 33%;
-    }
-
     a {
       text-decoration: none !important;
     }
 
     h4 {
-      font-size: 20px;
       padding: 0;
       margin: 0;
     }
