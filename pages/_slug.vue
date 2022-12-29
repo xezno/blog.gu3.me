@@ -32,6 +32,15 @@ export default {
     },
     url() {
       return `https://blog.gu3.me${this.$route.fullPath}`;
+    },
+    thumb() {
+      if (this.page) {
+        if (this.page.thumb)
+          return this.page.thumb;
+        return "https://blog.gu3.me/robot.png";
+      }
+
+      return "https://blog.gu3.me/robot.png"
     }
   },
   head() {
