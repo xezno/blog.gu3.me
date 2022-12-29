@@ -67,6 +67,11 @@ export default {
           property: 'og:url'
         },
         {
+          hid: 'og:image',
+          property: 'og:image',
+          content: `${this.thumb}`
+        },
+        {
           hid: 'og:article:published_time',
           content: this.date,
           property: 'og:article:published_time'
