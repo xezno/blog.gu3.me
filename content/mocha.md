@@ -88,6 +88,10 @@ You may have noticed `MemoryContext` in the above examples. This handles all mem
 
 The rendering all happens in C++. It's all bare-metal Vulkan wrapped in my own little abstraction. I'm currently targeting Vulkan 1.3, which gives me access to loads of cool features - like [dynamic rendering](https://registry.khronos.org/vulkan/specs/1.3-extensions/man/html/VK_KHR_dynamic_rendering.html), which lets me bypass renderpasses entirely and helps simplify rendering logic. I also recently added support for `VK_KHR_ray_query` (and the acceleration structures required for it). I haven't delved too far into this - I'm just using it for ray-traced shadows at the moment - but I intend on using it in compute shaders for things like indirect lighting calculations.
 
+![Mocha Asset Browser Screenshot](/mocha/shadows.png)
+
+You can see the shadows getting softer as they get further from the light.. this is super simple right now - it just takes 8 samples and scatters them - but also quite noisy.
+
 ## UI
 
 UI is done in C#. This is entirely custom. I wrote a neat little HTML and SCSS parser - with a decent subset of features supported. UI can hotload whenever you modify any HTML or SCSS files, so you get to preview changes instantly without having to restart your game or anything.
@@ -101,6 +105,8 @@ Tooling is done in C#. Everything uses ImGui. Bindings for this aren't generated
 I'm using the multi-viewports + docking branch. This means I can display each tool as its own separate window without having to worry too much. Everything works like you'd expect it to - you can maximise, minimise, close windows, and you can even hold shift to dock those windows into the main view.
 
 I think eventually I'll change this to be more like a normal game engine.. but I like how this works right now: it's wonderful for multi-monitor setups, because you can have your game maximised on one monitor, then have all the tools you're using on the other.
+
+![Mocha Asset Browser Screenshot](/mocha/asset_browser.png)
 
 ## Motivation & The Future
 
