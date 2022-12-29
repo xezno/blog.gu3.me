@@ -83,6 +83,11 @@ export default {
           content: `${this.title}`
         },
         {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image"
+        },
+        {
           hid: "twitter:description",
           name: "twitter:description",
           content: this.description
@@ -90,7 +95,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: "http://blog.gu3.me/robot.png"
+          content: `${this.thumb}`
         }
       ]
     }
