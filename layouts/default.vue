@@ -24,6 +24,10 @@ html {
 
   :not(pre) > code[class*="language-"], pre[class*="language-"], code {
     font-family: monospace !important;
+    font-size: 12px;
+    
+    /* Wrap text */
+    white-space: pre-wrap;
   }
 
   background: $main-900;
@@ -49,6 +53,28 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Inter", sans-serif;
 }
 
+video, div, img {
+
+  $margin: 20px;
+
+  @media screen and (min-width: 768px)
+  {
+    &.float-left, &.float-right {
+      width: 50%;
+    }
+    
+    &.float-left {
+      float: left;
+      margin-right: $margin;
+    }
+
+    &.float-right {
+      float: right; 
+      margin-left: $margin;
+    }
+  }
+}
+
 video, img {
   width: 100%;
 }
@@ -67,6 +93,10 @@ main {
   & h2 {
     font-size: 1.5em !important;
   }
+}
+
+blockquote {
+  opacity: 0.5;
 }
 
 .svg-inline--fa {
