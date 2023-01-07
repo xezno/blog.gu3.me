@@ -5,6 +5,8 @@
       <h5>
         {{ page.date | exactDate }}
       </h5>
+
+      <blockquote>{{ page.description }}</blockquote>
     </div>
     <nuxt-content :document="page" />
   </article>
@@ -152,5 +154,9 @@ export default {
   h5 {
     margin-top: 1.0em;
   }
+}
+
+article {
+  text-align: justify;
 }
 </style>

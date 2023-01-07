@@ -100,13 +100,15 @@ UI is done in C#. This is entirely custom. I wrote a neat little HTML and SCSS p
 
 ## Tooling
 
+<img class="float-right" src="/mocha/asset_browser.png" /> 
+
 Tooling is done in C#. Everything uses ImGui. Bindings for this aren't generated using InteropGen, but I'm instead just using the ImGui.NET library. All the rendering and platform setup is done in C++, and then the pointer to the ImGui context is sent to C#. As long as the versions for my local copy & the library match up, everything works perfectly.
 
-I'm using the multi-viewports + docking branch. This means I can display each tool as its separate window without having to worry too much. Everything works like you'd expect it to - you can maximize, minimize, and close windows, and you can even hold shift to dock those windows into the main view.
+I'm using the multi-viewports + docking branch. This means I can display each tool as its separate window without having to worry too much.
+
+Everything works like you'd expect it to - you can maximize, minimize, and close windows, and you can even hold shift to dock those windows into the main view.
 
 I think eventually I'll change this to be more like a normal game engine.. but I like how this works right now: it's wonderful for multi-monitor setups because you can have your game maximized on one monitor, then have all the tools you're using on the other.
-
-![Mocha Asset Browser Screenshot](/mocha/asset_browser.png)
 
 ## Motivation & The Future
 

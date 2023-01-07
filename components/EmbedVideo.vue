@@ -15,7 +15,7 @@
 <script>
   export default {
     props: {
-      src: String,
+      src: String
     },
     computed: {
       type: function() {
