@@ -1,22 +1,22 @@
 <template>
   <div>
     <div v-for="year in Object.keys(articlesByYear).reverse()" v-bind:key="year">
-      <h2>{{ year }}</h2>
-      
+      <h2 class="year-header">{{ year }}</h2>
+
       <article v-for="article in articlesByYear[year]" v-bind:key="article.title">
 
         <div class="left">
           <nuxt-link :to="`/${article.slug}`">
             {{ article.title }}
           </nuxt-link>
-          
+
           <blockquote>{{ article.description }}</blockquote>
         </div>
 
         <div class="right">
           {{ article.date | date }}
         </div>
-      
+
       </article>
     </div>
   </div>
@@ -43,7 +43,7 @@ export default {
     url() {
       return `https://blog.gu3.me${this.$route.fullPath}`;
     },
-    articlesByYear () {
+    articlesByYear() {
       return _.groupBy(this.articles, (article) => {
         return new Date(article.date).getFullYear()
       });
@@ -100,7 +100,8 @@ article {
     color: $accent;
   }
 
-  .left, .right {
+  .left,
+  .right {
     display: flex;
     flex-direction: column;
   }
@@ -112,6 +113,33 @@ article {
 
   .right {
     flex-shrink: 0;
+  }
+}
+
+.year-header {
+  position: relative;
+  background: linear-gradient(137.42deg, $accent, $accent-muted);
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+
+  // Text cut-out
+  color: $main-900;
+  padding: 0 10px;
+
+  border-radius: 5px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 </style>

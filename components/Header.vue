@@ -1,7 +1,8 @@
 <template>
   <header>
     <div class="header-inner">
-      <nuxt-link to="/"><h4>Alex's Blog</h4></nuxt-link>
+      <nuxt-link to="/"><h2>Alex's Blog</h2></nuxt-link>
+      Games 'n' Stuff
     </div>
   </header>
 </template>
@@ -17,16 +18,7 @@
 
 header {
   width: 100%;
-  
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
 
-  background: $main-1000;
-
-  text-transform: uppercase;
   z-index: 1000;
 
   .svg-inline--fa {
@@ -35,22 +27,27 @@ header {
 
   .header-inner {
     width: 100%;
-    padding: 10px 20px;
-    max-width: 800px;
     margin: auto;
 
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
     flex-wrap: nowrap;
+    flex-direction: column;
 
     a {
       text-decoration: none !important;
     }
 
-    h4 {
+    h2 {
       padding: 0;
       margin: 0;
+    }
+
+    padding: 0px 40px;
+
+    @media screen and (max-width: 768px) { 
+      padding: 0px 20px;
     }
   }
 }

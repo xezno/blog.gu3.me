@@ -1,10 +1,10 @@
 <template>
   <article>
     <div class="title" v-if="page">
-      <h1>{{ page.title }}</h1>
-      <h5>
+      <time :datetime="page.date">
         {{ page.date | exactDate }}
-      </h5>
+      </time>
+      <h1>{{ page.title }}</h1>
 
       <blockquote>{{ page.description }}</blockquote>
     </div>
@@ -131,32 +131,24 @@ export default {
   display: flex;
 
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   h1 {
     margin-bottom: 0.25em;
     margin-top: 0.25em;
     position: relative;
     z-index: 2;
-    
-    &::after {
-      content: " ";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -12px;
-      height: 4px;
-      background: #3b82f6;
-    }
   }
 
   h5 {
     margin-top: 1.0em;
   }
 }
+</style>
 
-article {
-  text-align: justify;
+<style lang="scss">
+.nuxt-content {
+  p {
+    text-align: justify;
+  }
 }
 </style>
