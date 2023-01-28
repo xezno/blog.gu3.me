@@ -30,7 +30,7 @@ header {
     margin: auto;
 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
     flex-direction: column;
