@@ -5,8 +5,12 @@
     <div class="gif-embed" v-if="type == 'gif'" @click="toggle">
       <vue-freezeframe :options="{ overlay: true, trigger: false }" :src="src" ref="freeze" />
     </div>
-    
-    <video controls v-if="type == 'html5'">
+
+    <video v-if="type == 'html5' && autoplay" autoplay muted playsinline>
+      <source :src="src">
+    </video>
+
+    <video v-if="type == 'html5' && !autoplay" controls>
       <source :src="src">
     </video>
   </div>
@@ -15,7 +19,8 @@
 <script>
   export default {
     props: {
-      src: String
+      src: String,
+      autoplay: Boolean
     },
     computed: {
       type: function() {
