@@ -3,7 +3,7 @@
     <div v-for="year in Object.keys(articlesByYear).reverse()" v-bind:key="year">
       <h2 class="year-header">{{ year }}</h2>
 
-      <article v-for="article in articlesByYear[year]" v-bind:key="article.title">
+      <article v-for="article in articlesByYear[year]" v-bind:key="article.title" v-if="new Date(article.date) <= new Date()">
 
         <div class="left">
           <nuxt-link :to="`/${article.slug}`">
