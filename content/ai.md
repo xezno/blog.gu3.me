@@ -1,8 +1,8 @@
 ---
 title: Exploiting Few-Shot Learning Through Large Language Models to Train Smaller Models
 date: 2023-03-12T17:20:00Z
-tags: update,blog,devlog
-thumb: https://blog.gu3.me/2022/opentpw.png
+tags: ai,neural-networks
+thumb: 
 description: I got side-tracked with AI again
 ---
 
