@@ -18,11 +18,16 @@ Currently, there are two other people with major contributions: [@peter-r-g](htt
 
 ## Editor Improvements
 
-<img class="float-right" src="/mocha-jan2023/inspector.png" /> 
 
 This month both I and @peter-r-g worked on the editor. I implemented a basic shell for an inspector and then @peter-r-g implemented support for entities, as well as type inspectors for everything you could want.
 
-Everything gets separated into categories, and there are some powerful attributes to play with:
+Everything gets separated into categories, and there are some powerful attributes to play with.
+
+@MuffinTastic also made some changes to the editor that make it crash less often: a lot of the time `ImGui.End*()` wouldn't get called if an element was too small to be rendered, which would cause the engine to crash. This has been fixed.
+
+<img class="float-right" src="/mocha-jan2023/inspector.png" /> 
+
+<div class="float-left">
 
 ```cs
 [DisplayMode( DisplayMode.Slider )]
@@ -36,7 +41,9 @@ public string Hello { get; set; } = "World";
 public string Hidden { get; set; } = "👀";
 ```
 
-@MuffinTastic also made some changes to the editor that make it crash less often: a lot of the time `ImGui.End*()` wouldn't get called if an element was too small to be rendered, which would cause the engine to crash. This has been fixed.
+</div>
+
+---
 
 ## InteropGen Changes
 

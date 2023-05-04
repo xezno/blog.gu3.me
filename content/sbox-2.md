@@ -2,7 +2,6 @@
 title: s&box - Week 2 
 tags: sbox,devlog 
 date: 2021-05-25T00:59:14+01:00
-thumb: https://cdn.discordapp.com/attachments/841000492750209034/845450008085790720/unknown.png
 description: Another week has flown by; here's some of the stuff I've been making in s&box.
 ---
 
