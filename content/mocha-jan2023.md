@@ -6,8 +6,6 @@ thumb: https://blog.gu3.me/mocha-jan2023/hotloading.png
 description: C# hotloading, real-time assets, and more
 ---
 
-<EmbedVideo src="https://i.imgur.com/v6gdlJM.mp4" :autoplay="true"></EmbedVideo>
-
 Last month I mentioned that I was working on a game engine... here's what changed between now and then
 
 ## Open-Source
@@ -105,8 +103,6 @@ This has also resulted in huge changes in project management. Rather than having
 @peter-r-g also added a load of options that can be set in the project file, including things like project references and NuGet packages. There's a list of them [available here](https://github.com/xezno/mocha/pull/32) for now, eventually they'll be documented in one place.
 
 This is infinitely more flexible than having the engine code and game code glued together. Eventually, the workflow for this will be even more frictionless after some editor improvements.
-
-<EmbedVideo src="https://i.imgur.com/v6gdlJM.mp4"></EmbedVideo>
 
 ## FileSystem Changes
 

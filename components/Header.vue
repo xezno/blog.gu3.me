@@ -2,7 +2,6 @@
   <header>
     <div class="header-inner">
       <nuxt-link to="/"><h2>Alex's Blog</h2></nuxt-link>
-      Games 'n' Stuff
     </div>
   </header>
 </template>
