@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer-inner">
-      &copy; Alex Guthrie 2022
+      &copy; Alex Guthrie
     </div>
   </footer>
 </template>
