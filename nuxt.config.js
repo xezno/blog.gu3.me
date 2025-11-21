@@ -8,7 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Alex Guthrie: Computer Science student and software developer.' },
+      { hid: 'description', name: 'description', content: 'Alex Guthrie' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'Alex\'s Blog' },
       { hid: 'og:locale', property: 'og:locale', content: 'en_GB' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -18,7 +18,7 @@ export default {
       { hid: "twitter:domain", property: "twitter:domain", content: "" },
       { hid: "twitter:url", property: "twitter:url", content: "http://blog.gu3.me/" },
       { hid: "twitter:title", name: "twitter:title", content: "Alex\'s Blog" },
-      { hid: "twitter:description", name: "twitter:description", content: "Alex Guthrie: Computer Science student and software developer." },
+      { hid: "twitter:description", name: "twitter:description", content: "Alex Guthrie" },
       { hid: "twitter:image", name: "twitter:image", content: "http://blog.gu3.me/robot.png" }
     ],
     link: [
