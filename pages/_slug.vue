@@ -33,16 +33,16 @@ export default {
       return "A post on Alex's Blog";
     },
     url() {
-      return `https://blog.gu3.me${this.$route.fullPath}`;
+      return `https://blog.xez.no${this.$route.fullPath}`;
     },
     thumb() {
       if (this.page) {
         if (this.page.thumb)
           return this.page.thumb;
-        return "https://blog.gu3.me/robot.png";
+        return "https://blog.xez.no/robot.png";
       }
 
-      return "https://blog.gu3.me/robot.png"
+      return "https://blog.xez.no/robot.png"
     },
     video() {
       if (!this.page || !this.page.video) return null;
@@ -52,7 +52,7 @@ export default {
         return this.page.video;
       }
 
-      return `https://blog.gu3.me${this.page.video}`;
+      return `https://blog.xez.no${this.page.video}`;
     },
     hasVideo() {
       return !!this.video;
