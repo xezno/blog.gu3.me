@@ -4,6 +4,7 @@ date: 2021-04-29T15:50:53+01:00
 description: Testing embeds
 tags: test
 hidden: true
+video: https://blog.xez.no/2022/weak%20throw.mp4
 ---
 
 <EmbedVideo src="https://youtu.be/aS40K53JQIg"></EmbedVideo>

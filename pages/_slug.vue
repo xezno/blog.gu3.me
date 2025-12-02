@@ -43,30 +43,120 @@ export default {
       }
 
       return "https://blog.gu3.me/robot.png"
+    },
+    video() {
+      if (!this.page || !this.page.video) return null;
+
+      // make sure we have an absolute url for og / discord
+      if (this.page.video.startsWith('http')) {
+        return this.page.video;
+      }
+
+      return `https://blog.gu3.me${this.page.video}`;
+    },
+    hasVideo() {
+      return !!this.video;
+    },
+    hasThumb() {
+      return !!(this.page && this.page.thumb);
     }
   },
   head() {
-    return {
-      title: this.title,
-      meta: [{
-          hid: 'description',
-          content: this.description,
-          name: 'description'
+    const meta = [
+      {
+        hid: 'description',
+        content: this.description,
+        name: 'description'
+      },
+      {
+        hid: 'og:title',
+        content: this.title,
+        property: 'og:title'
+      },
+      {
+        hid: 'og:description',
+        content: this.description,
+        property: 'og:description'
+      },
+      {
+        hid: 'og:url',
+        content: this.url,
+        property: 'og:url'
+      },
+      {
+        hid: 'og:article:published_time',
+        content: this.date,
+        property: 'og:article:published_time'
+      },
+      {
+        hid: 'og:article:author',
+        content: "Alex",
+        property: 'og:article:author'
+      },
+      {
+        hid: "twitter:domain",
+        property: "twitter:domain",
+        content: ""
+      },
+      {
+        hid: "twitter:url",
+        property: "twitter:url",
+        content: this.url
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: `${this.title}`
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: this.description
+      }
+    ];
+
+    if (this.hasVideo) {
+      // video opengraph for discord etc
+      meta.push(
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'video.other'
         },
         {
-          hid: 'og:title',
-          content: this.title,
-          property: 'og:title'
+          hid: 'og:video',
+          property: 'og:video',
+          content: this.video
         },
         {
-          hid: 'og:description',
-          content: this.description,
-          property: 'og:description'
+          hid: 'og:video:url',
+          property: 'og:video:url',
+          content: this.video
         },
         {
-          hid: 'og:url',
-          content: this.url,
-          property: 'og:url'
+          hid: 'og:video:secure_url',
+          property: 'og:video:secure_url',
+          content: this.video
+        },
+        // twitter player card
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "player"
+        },
+        {
+          hid: "twitter:player",
+          name: "twitter:player",
+          content: this.video
+        }
+      );
+    } else if (this.hasThumb) {
+      // image-only preview
+      meta.push(
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article'
         },
         {
           hid: 'og:image',
@@ -74,50 +164,40 @@ export default {
           content: `${this.thumb}`
         },
         {
-          hid: 'og:article:published_time',
-          content: this.date,
-          property: 'og:article:published_time'
-        },
-        {
-          hid: 'og:article:author',
-          content: "Alex",
-          property: 'og:article:author'
-        },
-        {
-          hid: "twitter:domain",
-          property: "twitter:domain",
-          content: ""
-        },
-        {
-          hid: "twitter:url",
-          property: "twitter:url",
-          content: "http://blog.gu3.me/"
-        },
-        {
-          hid: "twitter:title",
-          name: "twitter:title",
-          content: `${this.title}`
-        },
-        {
           hid: "twitter:card",
           name: "twitter:card",
           content: "summary_large_image"
-        },
-        {
-          hid: "twitter:description",
-          name: "twitter:description",
-          content: this.description
         },
         {
           hid: "twitter:image",
           name: "twitter:image",
           content: `${this.thumb}`
         }
-      ]
+      );
+    } else {
+      // text-only
+      meta.push(
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary"
+        }
+      );
+    }
+
+    return {
+      title: this.title,
+      meta
     }
   },
 }
 </script>
+
 
 <style lang="scss" scoped>
 @import "~/assets/colors.scss";
