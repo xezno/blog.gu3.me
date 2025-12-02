@@ -2,7 +2,7 @@
 title: Mocha - December 2022
 date: 2022-12-29T14:35:00Z
 tags: engine,devlog,mocha
-thumb: https://blog.gu3.me/mocha/mocha.png
+thumb: https://blog.xez.no/mocha/mocha.png
 description: I'm making a game engine.
 ---
 

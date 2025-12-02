@@ -2,7 +2,7 @@
 title: Mocha - January 2023
 date: 2023-1-28T17:15:00Z
 tags: engine,devlog,mocha
-thumb: https://blog.gu3.me/mocha-jan2023/hotloading.png
+thumb: https://blog.xez.no/mocha-jan2023/hotloading.png
 description: C# hotloading, real-time assets, and more
 ---
 
